@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Form PDKT Extreme</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 350px;
+    }
+    h2 {
+      color: #0077ff;
+    }
+    button {
+      margin: 10px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 15px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .yes {
+      background: #4facfe;
+      color: white;
+    }
+    .yes:hover {
+      background: #0066ff;
+    }
+    .no {
+      background: #ccc;
+      color: black;
+    }
+  </style>
+</head>
+<body>KEZZIA MAAFIN GUA YAAAA 👉🏻👈🏻
+  <div class="card">
+    <h2></h2>
+    <button class="yes" onclick="jawabIya()">Iya Dimaafin</button>
+    <button class="no" id="noBtn" onclick="trik()">Tidak 🙃</button>
+    <p id="jawaban"></p>
+  </div>
+
+  <script>
+    function jawabIya() {
+      document.getElementById("jawaban").innerHTML = 
+        "Yeeay!! MAKASIII YAA ZAA 😻😻";
+    }
+
+    function trik() {
+      let noBtn = document.getElementById("noBtn");
+      noBtn.innerText = "Iya deh 😅";
+      noBtn.className = "yes";
+      noBtn.setAttribute("onclick","jawabIya()");
+    }
+  </script>
+</body>
+</html>
